@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+*.log
+.vercel
+.env*
+*.bak
+preview_*.png
+.~lock.*
+package-lock.json
+package.json
