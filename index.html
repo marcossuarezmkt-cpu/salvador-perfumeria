@@ -60,7 +60,11 @@
     pointer-events: none;
   }
   .brand-logo {
-    width: 150px; height: auto; display: block; margin: 0 auto;
+    width: 150px; height: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block; margin: 0 auto;
     position: relative;
   }
   .hero-sub {
@@ -153,6 +157,12 @@
   }
   .badge.genero {
     background: rgba(11,61,145,0.88); left: auto; right: 8px; font-weight: 600;
+  }
+  .badge.genero-mujer {
+    background: rgba(216, 27, 96, 0.92); /* rosa sofisticado */
+  }
+  .badge.genero-unisex {
+    background: rgba(107, 114, 128, 0.92); /* gris neutro */
   }
 
   .card-body { padding: 0.8rem 0.85rem 0.95rem; flex: 1; display: flex; flex-direction: column; }
@@ -259,7 +269,7 @@
   }
   @media (min-width: 900px) {
     .hero { padding: 3.5rem 1.5rem 2.75rem; }
-    .brand-logo { width: 200px; }
+    .brand-logo { width: 200px; height: 200px; }
     .hero-sub { font-size: 0.9rem; margin-top: 1.2rem; }
     .hero-deco { width: 60px; margin-top: 1rem; }
     .fab-wa { bottom: 28px; right: 28px; padding: 0.95rem 1.35rem; font-size: 0.92rem; }
@@ -287,7 +297,7 @@
 <body>
 
 <header class="hero">
-  <img class="brand-logo" src="logo.png" alt="Salvador Perfumería" />
+  <img class="brand-logo" src="logo.svg" alt="Salvador Perfumería" />
   <div class="hero-deco"></div>
   <p class="hero-sub">Fragancias originales · Uruguay</p>
 </header>
@@ -442,7 +452,7 @@
     const priceBefore = (p.promocion && p.precio_antes && p.precio_antes > p.precio)
       ? `<span class="price-before">${fmtPrice(p.precio_antes)}</span>` : '';
     const promoBadge = p.promocion ? '<span class="badge">Promo</span>' : '';
-    const genBadge = p.genero ? `<span class="badge genero">${p.genero}</span>` : '';
+    const genBadge = p.genero ? `<span class="badge genero genero-${p.genero.toLowerCase()}">${p.genero}</span>` : '';
     return `
       <article class="card${p.promocion ? ' promo' : ''}" id="p-${p.id}" data-id="${p.id}">
         <div class="card-img">${imgBlock}${promoBadge}${genBadge}</div>
