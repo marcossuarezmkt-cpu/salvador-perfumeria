@@ -238,26 +238,23 @@
     position: fixed;
     bottom: 20px; right: 20px;
     z-index: 50;
-    display: flex; align-items: center; gap: 0.55rem;
+    display: inline-flex; align-items: center;
     background: #25D366; color: var(--blanco);
-    padding: 0.85rem 1.1rem;
+    padding: 0.8rem 1.25rem;
     border-radius: 999px;
     text-decoration: none;
-    font-weight: 600; font-size: 0.88rem;
+    font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 0.01em;
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
     animation: fabPulse 2.5s ease-in-out infinite;
     max-width: calc(100vw - 40px);
+    white-space: nowrap;
   }
   .fab-wa:active { transform: scale(0.96); }
-  .fab-wa svg { width: 22px; height: 22px; flex-shrink: 0; }
-  .fab-wa .fab-label { display: none; }
+  .fab-wa:hover { background: #1EB855; }
   @keyframes fabPulse {
     0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45); }
     50%      { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.75); }
-  }
-
-  @media (min-width: 560px) {
-    .fab-wa .fab-label { display: inline; }
   }
 
   @media (min-width: 560px) {
@@ -272,7 +269,7 @@
     .brand-logo { width: 200px; height: 200px; }
     .hero-sub { font-size: 0.9rem; margin-top: 1.2rem; }
     .hero-deco { width: 60px; margin-top: 1rem; }
-    .fab-wa { bottom: 28px; right: 28px; padding: 0.95rem 1.35rem; font-size: 0.92rem; }
+    .fab-wa { bottom: 28px; right: 28px; padding: 0.95rem 1.5rem; font-size: 0.95rem; }
     .toolbar { padding: 1rem 0; }
     .toolbar-inner {
       flex-direction: row; align-items: center; justify-content: space-between;
@@ -332,9 +329,8 @@
 </footer>
 
 <!-- Botón flotante WhatsApp — siempre visible -->
-<a class="fab-wa" href="https://wa.me/59899284367?text=Hola!%20Quer%C3%ADa%20consultar%20por%20otras%20fragancias%20que%20no%20figuran%20en%20el%20cat%C3%A1logo." target="_blank" rel="noopener" aria-label="Consultar otras fragancias por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0012 0C5.4 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6a12 12 0 005.8 1.5h.01c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4zM12 21.8h-.01a9.9 9.9 0 01-5-1.4l-.4-.2-3.7.9 1-3.6-.3-.4A10 10 0 0112 2.2c5.4 0 9.8 4.4 9.8 9.8 0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.4-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3 4.8 4.3 1.7.7 2.3.8 3.2.7.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3z"/></svg>
-  <span class="fab-label">Consultar otras fragancias</span>
+<a class="fab-wa" href="https://wa.me/59899284367?text=Hola!%20Quer%C3%ADa%20consultar%20por%20otras%20fragancias%20que%20no%20figuran%20en%20el%20cat%C3%A1logo." target="_blank" rel="noopener" aria-label="Consultar otra fragancia por WhatsApp">
+  <span class="fab-label">Consultar otra fragancia</span>
 </a>
 
 <!-- ========== SEED FALLBACK: datos iniciales embebidos ==========
