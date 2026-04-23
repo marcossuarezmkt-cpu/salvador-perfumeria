@@ -233,28 +233,29 @@
   }
   footer .wa-global svg { width: 16px; height: 16px; }
 
-  /* ========== BOTÓN FLOTANTE WHATSAPP ========== */
+  /* ========== BOTÓN FLOTANTE ========== */
   .fab-wa {
     position: fixed;
-    bottom: 20px; right: 20px;
+    bottom: 16px; right: 16px;
     z-index: 50;
     display: inline-flex; align-items: center;
-    background: #25D366; color: var(--blanco);
-    padding: 0.8rem 1.25rem;
+    background: var(--blanco);
+    color: var(--azul);
+    padding: 0.5rem 0.9rem;
     border-radius: 999px;
+    border: 1px solid var(--azul);
     text-decoration: none;
-    font-weight: 600; font-size: 0.9rem;
+    font-weight: 600; font-size: 0.78rem;
     letter-spacing: 0.01em;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-    animation: fabPulse 2.5s ease-in-out infinite;
-    max-width: calc(100vw - 40px);
+    box-shadow: 0 3px 12px rgba(11, 61, 145, 0.18);
+    transition: all 0.2s ease;
     white-space: nowrap;
+    max-width: calc(100vw - 32px);
   }
   .fab-wa:active { transform: scale(0.96); }
-  .fab-wa:hover { background: #1EB855; }
-  @keyframes fabPulse {
-    0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45); }
-    50%      { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.75); }
+  .fab-wa:hover {
+    background: var(--azul); color: var(--blanco);
+    box-shadow: 0 5px 16px rgba(11, 61, 145, 0.32);
   }
 
   @media (min-width: 560px) {
@@ -269,7 +270,7 @@
     .brand-logo { width: 200px; height: 200px; }
     .hero-sub { font-size: 0.9rem; margin-top: 1.2rem; }
     .hero-deco { width: 60px; margin-top: 1rem; }
-    .fab-wa { bottom: 28px; right: 28px; padding: 0.95rem 1.5rem; font-size: 0.95rem; }
+    .fab-wa { bottom: 24px; right: 24px; padding: 0.55rem 1rem; font-size: 0.82rem; }
     .toolbar { padding: 1rem 0; }
     .toolbar-inner {
       flex-direction: row; align-items: center; justify-content: space-between;
