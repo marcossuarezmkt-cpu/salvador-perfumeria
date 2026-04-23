@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Salvador Perfumería">
+  <defs>
+    <path id="arcTop" d="M 45 150 A 105 105 0 0 1 255 150" fill="none"/>
+  </defs>
+  <!-- Anillo exterior doble -->
+  <circle cx="150" cy="150" r="145" fill="#FFFFFF" stroke="#0B3D91" stroke-width="3"/>
+  <circle cx="150" cy="150" r="138" fill="none" stroke="#0B3D91" stroke-width="1.5"/>
+
+  <!-- Texto "PERFUMERIA" curvado arriba -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="6" fill="#0B3D91" font-weight="500">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">PERFUMERIA</textPath>
+  </text>
+
+  <!-- Disco azul central -->
+  <circle cx="150" cy="160" r="78" fill="#0B3D91"/>
+
+  <!-- Frasco silueta -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Tapa superior -->
+    <rect x="141" y="102" width="18" height="22" rx="2"/>
+    <!-- Cuello -->
+    <rect x="135" y="124" width="30" height="10" rx="1"/>
+    <!-- Cuerpo del frasco -->
+    <path d="M 120 144 Q 120 136 128 134 L 172 134 Q 180 136 180 144 L 180 200 Q 180 212 168 212 L 132 212 Q 120 212 120 200 Z"/>
+  </g>
+
+  <!-- Banda inferior con "Salvador" -->
+  <rect x="50" y="210" width="200" height="48" fill="#0B3D91"/>
+  <text x="150" y="246" text-anchor="middle" font-family="'Brush Script MT', 'Lucida Handwriting', cursive" font-style="italic" font-size="44" fill="#FFFFFF" font-weight="500">Salvador</text>
+</svg>
