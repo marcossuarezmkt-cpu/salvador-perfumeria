@@ -315,7 +315,7 @@
     <div class="filters filters-row" id="filters-tipo">
       <button class="chip tipo-filter active" data-tipo="todos">Todos</button>
       <button class="chip tipo-filter" data-tipo="Diseñador">Diseñador</button>
-      <button class="chip tipo-filter" data-tipo="Árabe">Árabe</button>
+      <button class="chip tipo-filter" data-tipo="Árabes">Árabes</button>
     </div>
     <input type="search" class="search" id="search" placeholder="Buscar por marca, nombre, notas..." autocomplete="off" />
   </div>
@@ -487,8 +487,8 @@
     const grid = document.getElementById('grid');
     let list = perfumes.filter(p => p.stock);
 
-    // Filtro por Tipo (Diseñador / Árabe)
-    if (currentTipo === 'Diseñador' || currentTipo === 'Árabe') {
+    // Filtro por Tipo (Diseñador / Árabes)
+    if (currentTipo === 'Diseñador' || currentTipo === 'Árabes') {
       list = list.filter(p => (p.tipo || 'Diseñador') === currentTipo);
     }
 
