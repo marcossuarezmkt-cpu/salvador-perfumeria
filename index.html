@@ -44,35 +44,17 @@
   button { font-family: inherit; }
 
   .hero {
-    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
-    color: var(--blanco);
-    padding: 2.25rem 1.25rem 1.75rem;
-    text-align: center;
-    position: relative;
+    background: var(--azul-oscuro);
+    line-height: 0;
     overflow: hidden;
   }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 20% 30%, rgba(201,162,75,0.18) 0%, transparent 45%),
-      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 45%);
-    pointer-events: none;
+  .hero-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
   }
-  .brand-logo {
-    width: 150px; height: 150px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block; margin: 0 auto;
-    position: relative;
-  }
-  .hero-sub {
-    font-size: 0.72rem; font-weight: 400; letter-spacing: 0.18em;
-    text-transform: uppercase; margin-top: 0.8rem; opacity: 0.9; position: relative;
-    color: var(--blanco);
-  }
-  .hero-deco { width: 48px; height: 1px; background: var(--dorado); margin: 0.6rem auto 0; position: relative; }
 
   .toolbar {
     position: sticky; top: 0; z-index: 10;
@@ -270,10 +252,6 @@
     .wa-btn { font-size: 0.85rem; padding: 0.75rem; }
   }
   @media (min-width: 900px) {
-    .hero { padding: 3.5rem 1.5rem 2.75rem; }
-    .brand-logo { width: 200px; height: 200px; }
-    .hero-sub { font-size: 0.9rem; margin-top: 1.2rem; }
-    .hero-deco { width: 60px; margin-top: 1rem; }
     .fab-wa { bottom: 24px; right: 24px; padding: 0.55rem 1rem; font-size: 0.82rem; }
     .toolbar { padding: 1rem 0; }
     .toolbar-inner {
@@ -299,9 +277,7 @@
 <body>
 
 <header class="hero">
-  <img class="brand-logo" src="logo.png" alt="Salvador Perfumería" />
-  <div class="hero-deco"></div>
-  <p class="hero-sub">Fragancias originales · Uruguay</p>
+  <img class="hero-banner" src="hero.jpg" alt="Salvador Perfumería · Envíos a todo el país" />
 </header>
 
 <div class="toolbar">
